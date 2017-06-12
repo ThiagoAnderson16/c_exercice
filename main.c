@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <string.h>
 
 // COMPILAR COMO: gcc -o main *.c -lm
 
@@ -49,17 +50,249 @@ int main() {
         case 13:
             questao13();
             break;
+        case 14:
+            questao14();
+            break;
+        case 15:
+            questao15();
+            break;
+        case 16:
+            questao16();
+            break;
+        case 17:
+            questao17();
+            break;
+        case 18:
+            questao18();
+            break;
+        case 19:
+            questao19();
+            break;
+        case 20:
+            questao20();
+            break;
+        case 21:
+            questao21();
+            break;
+        case 22:
+            questao22();
+            break;
+        case 23:
+            questao23();
+            break;
     }
     
     return 0;
 }
 
+int questao23(){
+    int x, y, z;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    printf("z: ");
+    scanf("%d", &z);
+    
+    if(x > y){
+        if(x > z){
+            if(y > z){
+               printf("%d,%d,%d\n", z, y, x); 
+            } else {
+                printf("%d,%d,%d\n", y, z, x); 
+            }
+        } else {
+           printf("%d,%d,%d\n", y, x, z);  
+        }
+    } else if(y > x) {
+        if(y > z){
+            if(x > z){
+                printf("%d,%d,%d\n", z, x, y);     
+            } else {
+                printf("%d,%d,%d\n", x, z, y);
+            }
+        } else {
+            printf("%d,%d,%d\n", x, y, z);
+        }
+    }
+}
+
+int questao22(){
+    int x, y, z, maior;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    printf("z: ");
+    scanf("%d", &z);
+    
+    if(x > y){
+        if(x > z){
+            maior = x;
+        } else {
+            maior = z;
+        }
+    } else if(y > x) {
+        if(y > z){
+            maior = y;
+        } else {
+            maior = z;
+        }
+    } else {
+        maior = z;
+    }
+}
+
+
+
+int questao21(){
+    int x, y, z;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    printf("z: ");
+    scanf("%d", &z);
+    
+    if(x > y){
+        if(x > z){
+            printf("%d\n", x);
+        } else {
+            printf("%d\n", z);
+        }
+    } else if(y > x) {
+        if(y > z){
+            printf("%d\n", y);
+        } else {
+            printf("%d\n", z);
+        }
+    } else {
+        printf("%d\n", z);
+    }
+}
+
+int questao20(){
+    int x, y;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    if(x > y){
+        printf("%d, %d\n", y, x);
+    } else {
+        printf("%d, %d\n", x, y);
+    }
+}
+
+int questao19(){
+    int x, y;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    if(x > y){
+        printf("%d, %d\n", x, y);
+    } else {
+        printf("%d, %d\n", y, x);
+    }
+}
+
+int questao18(){
+    int x, y;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    if(x < y){
+        printf("%d\n", x);
+    } else {
+        printf("%d\n", y);
+    }
+}
+
+int questao17(){
+    int x, y;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    if(x > y){
+        printf("%d\n", x);
+    } else {
+        printf("%d\n", y);
+    }
+}
+
+int questao16(){
+    int x, y;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    if(x == y){
+        printf("Iguais\n");
+    } else {
+        printf("Diferentes\n");
+    }
+   
+    
+}
+
+int questao15(){
+    int x, y, a;
+    float b;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    a = x/y;
+    b = (float) x/y;
+    
+    if ((b-a) > 0){
+        printf("Não é inteiro\n");    
+    } else {
+        printf("É inteiro\n"); 
+    }
+    
+}
+
+int questao14(){
+    int x, y, a;
+    float b;
+    printf("x: ");
+    scanf("%d", &x);
+    printf("y: ");
+    scanf("%d", &y);
+    
+    a = x/y;
+    b = (float) x/y;
+    
+    if ((b-a) > 0){
+        printf("Não divisível\n");    
+    } else {
+        printf("É divisível\n"); 
+    }
+    
+}
+
 int questao13(){
     char x[100];
+    int i, j;
  
     printf("Capital do Brasil: ");
-    scanf("%s",x);
-
+    scanf("%s", x);
+    
+    if ((strcmp (x, "brasília") == 0) || (strcmp (x, "BRASÍLIA") == 0)){
+        printf("PARABÉNS\n");
+    } else {
+        printf("ERROU\n");
+    }
 }
 
 int questao12(){
@@ -225,3 +458,4 @@ int questao7(){
         printf("Não está entre 20 e 90\n");
     }
 }
+
