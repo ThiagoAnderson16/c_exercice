@@ -5,5 +5,5 @@
 
 	<li>Questões feitas: de 1 a 40</li>
 
-	<li>Compilar: <span>gcc -o main *.c -lm</span></li>
+	<li>Compilar: gcc -o main *.c -lm</li>
 </ul>
