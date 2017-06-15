@@ -2,8 +2,11 @@
 
 <ul>
 	<li>Aluno: Thiago Anderson Costa</li>
-
+</ul>
+<ul>
 	<li>Questões feitas: de 1 a 40</li>
-
-	<li>Compilar: gcc -o main *.c -lm</li>
+</ul>
+<ul>
+	<li>Compilar: </li>
+	<li>gcc -o main *.c -lm</li>
 </ul>
