@@ -7,6 +7,5 @@
 	<li>Questões feitas: de 1 a 40</li>
 </ul>
 <ul>
-	<li>Compilar: </li>
-	<li>gcc -o main *.c -lm</li>
+	<li>Compilar: <span>gcc -o main *.c -lm</span></li>
 </ul>
