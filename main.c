@@ -4,60 +4,271 @@
 #include <string.h>
 
 // COMPILAR COMO: gcc -o main *.c -lm
+
 int questao40(){
     
+    int a, b, c, delta, x1, x2;
+
+    printf("a: ");
+    scanf("%d", &a);
+    printf("b: ");
+    scanf("%d", &b);
+    printf("c: ");
+    scanf("%d", &c);
+
+    if(a != 0){
+        delta = (b*b) - (4*a*c);        
+        x1 = (-b + sqrt(delta))/(2*a);
+        x2 = (-b - sqrt(delta))/(2*a);
+
+        printf("x1: %d; x2: %d\n", x1, x2);
+    } else {
+        printf("Impossível realizar o cálculo. 'a' igual a 0.\n");
+    }
+
 }
 
 int questao39(){
-    
+    int x;
+
+    printf("x: ");
+    scanf("%d", &x);
+
+    if(x == 5){
+        printf("Igual a 5");
+    } else if( x == 200 ){
+        printf("Igual a 200.\n");
+    } else if( x == 400 ){
+        printf("Igual a 400.\n");
+    } else if( x > 500 && x < 1000){
+        printf("Está no intervalo entre 500 e 1000.\n");
+    } else {
+        printf("Está fora dos escopos\n");
+    }
+
 }
 
 int questao38(){
-    
+    char nome[10][15];
+    int idade;
+
+    printf("Nome: ");
+    scanf("%s", nome[0]);
+
+    printf("Idade: ");
+    scanf("%d", &idade);    
+
+    printf("%s\n", nome[0]);
+
+    if(idade <= 10){        
+        printf("Valor: 30,00\n");
+    } else if(idade <= 29){
+        printf("Valor: 60,00\n");
+    } else if(idade <= 45){
+        printf("Valor: 120,00\n");
+    } else if(idade <= 59){
+        printf("Valor: 150,00\n");
+    } else if(idade <= 65){
+        printf("Valor: 250,00\n");
+    } else if(idade > 65){
+        printf("Valor: 400,00\n");
+    }
 }
 
 int questao37(){
-    
+
+    int idade;
+
+    printf("Idade: ");
+    scanf("%d", &idade);
+
+    if(idade < 16){
+        printf("Não eleitor\n");
+    } else if(idade <= 65){
+        printf("Eleitor obrigatório\n");
+    } else {
+        printf("Eleitor facultativo\n");
+    }
+
 }
 
 int questao36(){
+
+    int a, b, aux;
+
+    printf("A: ");
+    scanf("%d", &a);
+    printf("B: ");
+    scanf("%d", &b);
+
+    aux = a;
+    a = b;
+    b = aux;
     
 }
 
 int questao35(){
-    
+    char nome, sexo;
+    int idade;
+
+    printf("Nome: ");
+    scanf("%s", &nome);
+    printf("Sexo: ");
+    scanf("%s", &sexo);
+    printf("Idade: ");
+    scanf("%d", &idade);
+
+    if((sexo == 'f' || sexo == 'F') && idade < 25){
+        printf("ACEITA\n");
+    } else {
+        printf("NÃO ACEITA\n");
+    }
+
 }
 
 int questao34(){
-    
+    int ano_nascimento, ano_atual;
+
+    while(1==1){
+        printf("Ano de nascimento: ");
+        scanf("%d", &ano_nascimento);
+        printf("Ano atual: ");
+        scanf("%d", &ano_atual);
+
+        if(ano_nascimento > 0 && ano_nascimento <= ano_atual){
+            printf("Idade: %d\n", (ano_atual - ano_nascimento));
+            break;
+        } else {
+            printf("Ano de nascimento inválido!\n");
+        }
+    }
 }
 
 int questao33(){
-    
+    int x;
+
+    printf("Idade: ");
+    scanf("%d", &x);
+
+    if(x < 18){
+        printf("Menor de idade\n");
+    } else if(x < 65){
+        printf("Maior de idade\n");
+    } else {
+        printf("Maior de 65 anos\n");
+    }
 }
 
 int questao32(){
-    
+    float x;
+
+    printf("Valor do produto: ");
+    scanf("%f", &x);
+
+    if(x < 20){
+        printf("%.2f\n", (x + (x*0.2)));
+    } else {
+        printf("%.2f\n", (x + (x*0.3)));
+    }
+
 }
 
 int questao31(){
-    
+    int sal;
+
+    printf("Salário: ");
+    scanf("%d", &sal);
+
+    if(sal <= 600){
+        printf("Isento\n");
+    } else if(sal <= 1200){
+        printf("%.2f\n", (0.2 * sal));
+    } else if(sal <= 2000){
+        printf("%.2f\n", (0.25 * sal));
+    } else {
+        printf("%.2f\n", (0.3 * sal));
+    }
 }
 
-int questao30(){
+int questao30(){    
+    char nomes[10][15];
     
+    printf("nome 1: ");
+    scanf("%s", nomes[0]);
+
+    printf("nome 2: ");
+    scanf("%s", nomes[1]);
+
+    if(strcmp(nomes[0], nomes[1]) < 0) {
+        printf("%s\n", &nomes[0][0]);
+        printf("%s\n", &nomes[1][0]);
+    } else {
+        printf("%s\n", &nomes[1][0]);
+        printf("%s\n", &nomes[0][0]);
+    }    
 }
 
 int questao29(){
+    int alfa, beta, teta;
+
+    printf("Alfa: ");
+    scanf("%d", &alfa);
+    printf("Beta: ");
+    scanf("%d", &beta);
+    printf("Teta: ");
+    scanf("%d", &teta);
+
+    
+    if(alfa < 90 && beta < 90 && teta < 90){
+        printf("Triângulo acutângulo\n");
+    } else if(alfa > 90 || beta > 90 || teta > 90){
+        printf("Triângulo obtusângulo\n");
+    } else if(alfa == 90 || beta == 90 || teta == 90){
+        printf("Triângulo retângulo.\n");
+    }
     
 }
 
+
 int questao28(){
-    
+    int a, b, c;
+
+    printf("a: ");
+    scanf("%d", &a);
+    printf("b: ");
+    scanf("%d", &b);
+    printf("c: ");
+    scanf("%d", &c);
+
+    if(a<(b+c) && b<(a+c) && c<(a+b)){
+        if(a==b && b==c){
+            printf("Triângulo equilátero.\n");
+        } else if(a==b || b==c || a==c){
+            printf("Triângulo isósceles.\n");
+        } else {
+            printf("Triângulo escaleno.\n");
+        }
+    } else {
+        printf("NÃO podem ser lados de um triângulo!\n");
+    }
 }
 
 int questao27(){
-    
+    int a, b, c;
+
+    printf("a: ");
+    scanf("%d", &a);
+    printf("b: ");
+    scanf("%d", &b);
+    printf("c: ");
+    scanf("%d", &c);
+
+    if(a<(b+c) && b<(a+c) && c<(a+b)){
+        printf("Podem ser lados de um triângulo!\n");
+    } else {
+        printf("NÃO podem ser lados de um triângulo!\n");
+    }
+
 }
 
 void questao26(){
@@ -536,9 +747,9 @@ void questao7(){
     }
 }
 
-int main() {
+int menu_questoes(){
     int x;
-    printf ("Digite o número da questão: ");
+    printf ("\nNúmero da questão (1 a 40): ");
     scanf("%d", &x);
 
     switch (x){
@@ -662,7 +873,15 @@ int main() {
         case 40:
             questao40();
             break;
+        default:
+            return 1;
     }
-    
-    return 0;
+}
+
+int main() {
+    while(1==1){
+        if(menu_questoes() == 1){
+            break;
+        }
+    }
 }
