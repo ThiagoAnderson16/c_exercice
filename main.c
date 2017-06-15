@@ -878,7 +878,7 @@ int menu_questoes(){
     }
 }
 
-int main() {
+void main() {
     while(1==1){
         if(menu_questoes() == 1){
             break;
