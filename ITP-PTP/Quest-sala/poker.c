@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-int main(){
+int main() {
 
-	char string[50] = {'s', 't', 'r', 'i', 'g', 'g', '\0'};
+	char entrada[50];
 
-	printf("%s\n", string);
-
+	scanf("%s", &entrada);
 
 	for (int i = 0; i<6; i++){
 		printf("%s\n", string[i]);
 	}
 
 	return 0;
+
 }
