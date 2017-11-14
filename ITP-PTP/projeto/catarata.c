@@ -11,11 +11,11 @@ typedef struct imagem{
 
 // Função que lerá o arquivo da imagem.
 // Passo tudo como ponteiro para poder ter acesso no main.
-void leitura_imagem(int *largura, int *altura, int *vetor_pixels){
+int *leitura_imagem(int *largura, int *altura){
 	
 	char tipo[2], comentario[100]; // Primeira e segunda linha do arquivo PPM
 	int j, tam_vetor = 1, temp; // Contadores
-	//int* vetor_pixels;
+	int* vetor_pixels;
 	// Abrindo o arquivo e dizendo que é apenas para leitura
 	FILE *arquivo = fopen("img/Catarata.ppm", "r");
 
@@ -67,6 +67,8 @@ void leitura_imagem(int *largura, int *altura, int *vetor_pixels){
 	// Não dei o free no vetor pois quero poder acessá-lo no main
 	//free(vetor_pixels);
 
+	return vetor_pixels;
+
 }
 
 int main(){
@@ -76,10 +78,10 @@ int main(){
 	Imagem imagem = {largura, altura, &pixels};
 
 	// Passando os valores para função de leitura de imagem
-	leitura_imagem(&imagem.largura, &imagem.altura, &imagem.vetor_pixels[0]);
+	imagem.vetor_pixels = leitura_imagem(&imagem.largura, &imagem.altura);
 
 	// Imprimindo os valores para veriicar se realmente posso tratá-los a partir da estrutura definida
-	printf("%d %d %d\n", imagem.largura, imagem.altura, imagem.vetor_pixels[0]);
+	printf("%d %d %d\n", imagem.largura, imagem.altura, imagem.vetor_pixels[2]);
 
 	/* 
 	Problema encontrado: nessa print acima, em "imagem.vetor_pixels[0]", o valor esperado 
