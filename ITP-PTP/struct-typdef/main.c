@@ -23,5 +23,12 @@ int main(){
 	printf("%s\n", new_turma.campos);
 
 
+	struct aluno *new_matheus;
+
+	new_matheus = &new_Felipe;
+
+	printf("%c %d\n", new_matheus->sexo, (*new_matheus).idade);
+
+
 	return 0;
 }
